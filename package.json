@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/FermonMontego/html/issues"
   },
-  "homepage": "https://github.com/FermonMontego/html#readme"
+  "homepage": "https://github.com/FermonMontego/html#readme",
+  "dependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
 }
