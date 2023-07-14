@@ -11,7 +11,8 @@
 }
 .header {
   transition: all 0.25s ease-in-out;
-  &.fixed {
+  &.fixed,
+  &.open-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,7 +22,11 @@
 
     & > nav {
       background-color: #fff;
-
+      .burger-mobile {
+        span {
+          background-color: #0f3974;
+        }
+      }
       .navigation-top__list {
         li {
           a {
@@ -48,7 +53,7 @@
           color: #fff;
 
           &:hover {
-            background-color: #0f3974!important;
+            background-color: #0f3974 !important;
             color: #fff;
           }
         }
@@ -107,6 +112,92 @@
           path {
             stroke: #fff;
             fill: #fff;
+          }
+        }
+      }
+    }
+
+    .desktop-mobile__wrapper {
+      display: flex;
+      gap: 90px;
+
+      &.visible {
+        display: flex !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        height: 100vh;
+        flex-direction: column;
+        background: #fff;
+        z-index: 99999999999999999;
+        width: 75%;
+
+        .navigation-top__list {
+          display: flex;
+          align-items: start;
+          gap: 25px;
+          flex-direction: column;
+
+          li {
+            a {
+              color: #051a2c;
+              font-size: 18px;
+              .wrapper-dropdown {
+                svg {
+                  path {
+                    stroke: #051a2c;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button_group {
+          flex-direction: column;
+          .button_1 {
+            color: #df0050;
+            width: 100%;
+            text-align: center;
+          }
+
+          .button_2 {
+            width: 100%;
+            text-align: center;
+            background: #1e5aaf;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .burger-mobile {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      width: 50px;
+      cursor: pointer;
+      span {
+        max-width: 50px;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+      }
+    }
+
+    .wrapper-links__container {
+      .wrapper-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 45px;
+        a {
+          color: #051a2c;
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
@@ -407,7 +498,7 @@
 
 .footer_bottom {
   background: #051a2c;
-  padding: 40px 50px;
+  padding: 40px 0px;
   margin-top: 120px;
 
   .title-footer {
