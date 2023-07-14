@@ -28,6 +28,7 @@ nodeTopLink = document.querySelectorAll(".navigation-top__list li a");
 for (let i = 0; i < nodeTopLink.length; i++) {
   if (!nodeTopLink[i].attributes.href) {
     nodeTopLink[i].addEventListener("click", (e) => {
+      e.stopPropagation();
       const isActiveMenu = document.querySelector("[data-is-activ]");
       const attribute = Object.values(nodeTopLink[i].dataset)[0];
       console.log(isActiveMenu);

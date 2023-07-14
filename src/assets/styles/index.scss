@@ -30,6 +30,7 @@
       .navigation-top__list {
         li {
           a {
+            cursor: pointer;
             color: #051a2c;
 
             span {
@@ -99,6 +100,7 @@
           display: flex;
           align-items: center;
           gap: 8px;
+          cursor: pointer;
           &:hover {
             text-decoration: underline;
           }
