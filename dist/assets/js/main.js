@@ -5,9 +5,10 @@ import menuDropdownData from "../../data/menuDropdown.data.json";
 
 const header = document.querySelector("header");
 
-const burger = document.querySelector(".burger-mobile");
+const burger = document.querySelector(".burger-mobile"); // Кнопка бургера
 
 window.addEventListener("scroll", (e) => {
+  // Слушаем скролл окна
   if (window.scrollY >= 200) {
     header.classList.add("fixed");
   } else {
@@ -23,7 +24,7 @@ burger.addEventListener("click", function (event) {
 });
 let nodeTopLink;
 
-nodeTopLink = document.querySelectorAll(".navigation-top__list li a");
+nodeTopLink = document.querySelectorAll(".navigation-top__list li a"); // Собираем все ссылки из <nav> -> <li>
 
 for (let i = 0; i < nodeTopLink.length; i++) {
   if (!nodeTopLink[i].attributes.href) {
@@ -41,13 +42,14 @@ for (let i = 0; i < nodeTopLink.length; i++) {
         }
       }
 
-      if (!attribute) return alert("dropdown is empty");
+      if (!attribute) return alert("dropdown is empty"); // Если ссылка помечена как dropdown, но данных ее подпукнтов нет, выдаем алерт
 
       header.classList.add("open-menu");
 
-      const elementMenyNavigator = createElementNavigator(attribute);
+      const elementMenyNavigator = createElementNavigator(attribute); // Передаем значение атрибута в функцию по созданию блока с подпунктами
 
       if (window.innerWidth < 1100) {
+        // Здесь проверяю размер окна, если оно меньше десктопа, то меняем способ вставки блока с подпунктами
         e.target.parentNode.appendChild(elementMenyNavigator);
       } else {
         e.target.offsetParent.appendChild(elementMenyNavigator);
@@ -56,7 +58,17 @@ for (let i = 0; i < nodeTopLink.length; i++) {
   }
 }
 
+/**
+ * Функция принимает строку со значением аттрибута
+ * По которому нужно вернуть массив с элементами подходящие для этого значения.
+ * @param {string} attr
+ * 
+ * Функция вернет HTML element для последующего встраивания в DOM.
+ * @returns {HTMLBaseElement}
+ */
+
 function createElementNavigator(attr) {
+  // Функция создания элемена
   const element = document.createElement("div");
   element.classList.add("container");
   element.classList.add("wrapper-links__container");
