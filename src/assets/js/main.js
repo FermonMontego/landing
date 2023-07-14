@@ -68,14 +68,15 @@ for (let i = 0; i < nodeTopLink.length; i++) {
  */
 
 function createElementNavigator(attr) {
-  // Функция создания элемена
-  const element = document.createElement("div");
+  
+  const element = document.createElement("div"); // создаем обертку с классом container
   element.classList.add("container");
   element.classList.add("wrapper-links__container");
-  const wrapperContainerLinks = document.createElement("div");
+
+  const wrapperContainerLinks = document.createElement("div"); // Элемент который будет отвечать за расположение элементов внутри себя
   wrapperContainerLinks.classList.add("wrapper-links");
 
-  for (let i = 0; i < menuDropdownData[attr].length; i++) {
+  for (let i = 0; i < menuDropdownData[attr].length; i++) { // Перебираем массив значений и формируем ссылки и встраиваем в wrapperContainerLinks обертку
     const link = document.createElement("a");
     link.innerHTML = menuDropdownData[attr][i].label;
     link.href = menuDropdownData[attr][i].href;
@@ -83,8 +84,8 @@ function createElementNavigator(attr) {
     wrapperContainerLinks.insertAdjacentElement("beforeend", link);
   }
 
-  element.insertAdjacentElement("beforeend", wrapperContainerLinks);
-  element.setAttribute("data-is-activ", attr);
+  element.insertAdjacentElement("beforeend", wrapperContainerLinks); // встраиваем wrapperContainerLinks с ссылками в главный оберточный контейнер
+  element.setAttribute("data-is-activ", attr); // Добавляем аттрибут главному контейнеру, чтобы в дальнейшем следить за ним
   console.log(element);
   return element;
 }
