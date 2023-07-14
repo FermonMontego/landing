@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../fonts/Graphik_LC_Web.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  font-family: "MyFont" !important;
+}

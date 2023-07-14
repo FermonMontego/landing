@@ -1,0 +1,157 @@
+@media (max-width: 1366px) {
+  .card-description {
+    .card-container {
+      .card-item {
+      }
+    }
+  }
+}
+
+@media (max-width: 1166px) {
+  .card-description {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr) !important;
+      .card-item {
+        max-width: 100% !important;
+        max-height: 300px !important;
+      }
+    }
+  }
+
+  .footer_bottom {
+    .bottom-footer__text {
+      flex-direction: column;
+      align-items: start !important;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer_bottom {
+    .bottom-footer__text {
+      .group-footer__text {
+        flex-direction: column;
+        align-items: start !important;
+        gap: 15px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  body {
+    .main-content__page {
+      .more-information_links {
+        .wrapper-links {
+          flex-wrap: wrap !important;
+
+          .link-information {
+            width: calc(50% - 45px) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 75px !important;
+  }
+
+  .main-content__page
+    .slider-reviews
+    .slider-wrapper
+    .wrapper-content-reviews
+    aside {
+    padding: 30px !important;
+    height: 350px !important;
+    .top-reviews {
+      gap: 15px;
+      .wrapper-reviews__text {
+        flex-basis: 95% !important;
+
+        p {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .main-text {
+      font-size: 21px !important;
+      margin-top: 20px !important;
+    }
+  }
+}
+
+@media (max-width: 676px) {
+  body {
+    .main-content__page {
+      .more-information_links {
+        .wrapper-links {
+          flex-wrap: wrap !important;
+
+          .link-information {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  .top-container__wrapper {
+    background-position: center;
+  }
+  .content-banner h1 {
+    font-size: 60px !important;
+  }
+
+  .slider-reviews > h1 {
+    font-size: 24px !important;
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content__page
+    .slider-reviews
+    .slider-wrapper
+    .wrapper-content-reviews
+    aside {
+    padding: 30px !important;
+    height: 550px !important;
+    .top-reviews {
+      gap: 15px;
+      .wrapper-reviews__text {
+        flex-basis: 95% !important;
+
+        p {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .main-text {
+      font-size: 21px !important;
+      margin-top: 20px !important;
+    }
+  }
+  .card-description {
+    .card-container {
+      grid-template-columns: repeat(1, 1fr) !important;
+      .card-item {
+        max-width: 100% !important;
+        max-height: 300px !important;
+      }
+    }
+  }
+
+  .content-banner h1 {
+    font-size: 40px !important;
+  }
+
+  .container {
+    padding: 0px 25px !important;
+  }
+}
+
+@media (max-width: 360px) {
+}
